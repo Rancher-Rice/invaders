@@ -5,7 +5,7 @@ helm:
     fullnameOverride: "kubeinvaders"
     ingress:
       hosts:
-        - host: kubeinvaders.io
+        - hostName: kubeinvaders.io
     deployment:
       replicaCount: 1
       image:
