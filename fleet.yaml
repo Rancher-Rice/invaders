@@ -6,11 +6,11 @@ helm:
     ingress:
       hosts:
         - host: kubeinvaders.io
-deployment:
-  replicaCount: 1
-  image:
-    repository: luckysideburn/kubeinvaders
-    tag: v1.9
-config:
-  # target_namespace where kubeinvaders should be allowed to kill pods
-  target_namespace: "invaders1,invaders2"
+    deployment:
+      replicaCount: 1
+      image:
+        repository: luckysideburn/kubeinvaders
+        tag: v1.9
+    config:
+      # target_namespace where kubeinvaders should be allowed to kill pods
+      target_namespace: "invaders1,invaders2"
