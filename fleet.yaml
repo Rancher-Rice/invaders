@@ -1,5 +1,16 @@
 defaultNamespace: kubeinvaders 
 helm:
-  chart: https://github.com/lucky-sideburn/helm-charts/raw/master/kubeinvaders-1.9.tgz?raw=true
+  chart: https://github.com/lucky-sideburn/helm-charts/raw/master/kubeinvaders-1.9.tgz?raw=true 
   values:
     fullnameOverride: "kubeinvaders"
+    ingress:
+      hosts:
+        - host: kubeinvaders.io
+deployment:
+  replicaCount: 1
+  image:
+    repository: luckysideburn/kubeinvaders
+    tag: v1.9
+config:
+  # target_namespace where kubeinvaders should be allowed to kill pods
+  target_namespace: "invaders1\,invaders2"
